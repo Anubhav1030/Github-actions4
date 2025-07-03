@@ -1,0 +1,15 @@
+name: Successful Workflow
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-success:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run successful command
+        run: echo "✅ Build succeeded!"
