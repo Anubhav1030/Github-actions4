@@ -7,10 +7,7 @@ jobs:
   build-fail:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Run failing command
+      - name: Intentionally fail
         run: |
-          echo "❌ This will fail"
-          exit 1  # Force a failure here
+          echo "This will fail"
+          exit 1
